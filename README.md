@@ -20,7 +20,7 @@ floating-point numbers.
   Sets the matrix attribute to a new matrix.
   Requires newMatrix to be a list of lists with elements of type int or float.
 
-  - `add(self, matrixB: object) -> None`:
+  - `add(self, matrixB: object) -> list`:
   Adds two matrices of the same size.
   Requires matrixB to be another Matrix object.
   Returns the resulting matrix from the addition.
