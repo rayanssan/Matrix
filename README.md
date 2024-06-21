@@ -1,17 +1,17 @@
 # Matrix
 
-The Matrix class provides a collection of methods for performing various operations on matrices. 
+The <strong>Matrix</strong> class provides a collection of methods for performing various operations on matrices. 
 It is designed to handle matrices represented as lists of lists containing integer or 
 floating-point numbers.
 
-- Initialization:
+- <strong>Initialization</strong>:
 
   - `__init__(self, matrix: object) -> None`:
   Initializes an instance of the Matrix class.
   Requires matrix to be a list of lists with elements of type int or float.
   Deep copies the given matrix to ensure encapsulation.
 
-- Methods:
+- <strong>Methods</strong>:
 
   - `getMatrix(self) -> list`:
   Returns the matrix stored in the Matrix instance.
@@ -61,3 +61,6 @@ floating-point numbers.
   Handles less-than comparisons between Matrix objects.
   Requires otherMatrix to be another Matrix object.
   Returns True if the current matrix is less than the otherMatrix, otherwise False.
+
+<strong>Developed By:</strong>
+Rayan S. Santana
