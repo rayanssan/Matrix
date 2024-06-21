@@ -4,7 +4,7 @@ from time import process_time
 class Matrix:
     """Methods for operations with matrices."""
     
-    def __init__(self, matrix):
+    def __init__(self, matrix: object) -> None:
         """
         Initializes and instance of the Matrix class
 
@@ -17,7 +17,7 @@ class Matrix:
         """Returns the self._matrix attribute."""
         return self._matrix
 
-    def setMatrix(self, newMatrix):
+    def setMatrix(self, newMatrix: object) -> None:
         """
         Sets the self._matrix attribute equal to a new matrix attribute.
 
@@ -26,7 +26,7 @@ class Matrix:
         """
         self._matrix = newMatrix
 
-    def add(self, matrixB):
+    def add(self, matrixB: object) -> list:
         """
         Adds two matrices of the same size.
 
@@ -48,7 +48,7 @@ class Matrix:
         return result
 
 
-    def matrixProduct(self, matrixB) -> list:
+    def matrixProduct(self, matrixB: object) -> list:
         """
         Multiplies the currently initialized matrix with another matrix stored in a Matrix object.
         
@@ -73,7 +73,7 @@ class Matrix:
                     result[i][j] += matrixA[i][k] * matrixB[k][j]
         return result
 
-    def isInverse(self, matrixB) -> bool:
+    def isInverse(self, matrixB: object) -> bool:
         """
         Determines whether or not a given matrixB≠I is inverse of the currently initialized matrix.
         
@@ -99,11 +99,11 @@ class Matrix:
         matrix = self.getMatrix()
         n = len(matrix)
 		
-        # setting base cases: if empty matrix and zero matrix
+        # setting base cases: if empty matrix and zero matrix return 0
         if n == 0 or matrix == [[]]:
             return 0
-		# if non-square matrix return message
-        if n != len(matrix[0]):
+	# elif non-square matrix return message
+        elif n != len(matrix[0]):
             return "Non-square matrices do not have determinants"
         # elif 1x1 matrix return the single element
         elif n == 1:
@@ -186,7 +186,7 @@ class Matrix:
         """Returns a string representation of the matrix attribute stored in the Matrix class."""
         return f'A = {self.getMatrix()}'
 
-    def __eq__(self, otherMatrix) -> bool:
+    def __eq__(self, otherMatrix: object) -> bool:
         """
         Handles equality comparisons of objects of the Matrix class.
 
@@ -195,7 +195,7 @@ class Matrix:
         """
         return self.getMatrix() == otherMatrix
 
-    def __lt__(self, otherMatrix) -> bool:
+    def __lt__(self, otherMatrix: object) -> bool:
         """
         Handles less than comparisons of objects of the Matrix class.
 
