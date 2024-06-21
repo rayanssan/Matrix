@@ -6,7 +6,7 @@ floating-point numbers.
 
 - Initialization:
 
-  - `__init__(self, matrix)`:
+  - `__init__(self, matrix: object) -> None`:
   Initializes an instance of the Matrix class.
   Requires matrix to be a list of lists with elements of type int or float.
   Deep copies the given matrix to ensure encapsulation.
@@ -16,22 +16,22 @@ floating-point numbers.
   - `getMatrix(self) -> list`:
   Returns the matrix stored in the Matrix instance.
 
-  - `setMatrix(self, newMatrix)`:
+  - `setMatrix(self, newMatrix: object) -> None`:
   Sets the matrix attribute to a new matrix.
   Requires newMatrix to be a list of lists with elements of type int or float.
 
-  - `add(self, matrixB)`:
+  - `add(self, matrixB: object) -> None`:
   Adds two matrices of the same size.
   Requires matrixB to be another Matrix object.
   Returns the resulting matrix from the addition.
 
-  - `matrixProduct(self, matrixB) -> list`:
+  - `matrixProduct(self, matrixB: object) -> list`:
   Multiplies the current matrix with another matrix stored in a Matrix object.
   Requires matrixB to be another Matrix object.
   Ensures the matrices are compatible for multiplication.
   Returns the resulting matrix from the multiplication.
   
-  - `isInverse(self, matrixB) -> bool`:
+  - `isInverse(self, matrixB: object) -> bool`:
   Determines whether the given matrixB is the inverse of the current matrix.
   Requires both matrices to be square and matrixB to be another Matrix object.
   Returns True if matrixB is the inverse, otherwise returns False.
@@ -52,12 +52,12 @@ floating-point numbers.
   Provides a string representation of the matrix.
   Useful for easy visualization of the matrix contents.
 
-  - `__eq__(self, otherMatrix) -> bool`:
+  - `__eq__(self, otherMatrix: object) -> bool`:
   Handles equality comparisons between Matrix objects.
   Requires otherMatrix to be another Matrix object.
   Returns True if the matrices are equal, otherwise False.
 
-  - `__lt__(self, otherMatrix) -> bool`:
+  - `__lt__(self, otherMatrix: object) -> bool`:
   Handles less-than comparisons between Matrix objects.
   Requires otherMatrix to be another Matrix object.
   Returns True if the current matrix is less than the otherMatrix, otherwise False.
